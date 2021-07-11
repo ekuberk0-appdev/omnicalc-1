@@ -5,6 +5,9 @@ render({ :template => "calculation_templates/square_form.html.erb" })
 end 
 
 def calculate_square
+# params = {"elephant"=>"42"}
+@num = params.fetch("elephant").to_1
+@square_of_num = @num ** 2
     render({ :template => "calculation_templates/square_results.html.erb"})
 end    
 end
