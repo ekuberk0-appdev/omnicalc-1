@@ -6,9 +6,19 @@ get("/square/results", { :controller => "application", :action => "calculate_squ
 
 get("/random/results", { :controller => "application", :action => "calculate_random"})
 
+
+
 get("/random/new", { :controller => "application", :action => "random_form"})
+
+
 
 get("/payment/new", { :controller => "application", :action => "payment_form"})
 
+get("/payment/results", { :controller => "application", :action => "payment_results"})
+
+
 get("/square_root/new", { :controller => "application", :action => "sqroot_form"})
+
+get("/square_root/results", { :controller => "application", :action => "sqroot_results"})
+
 end
