@@ -28,4 +28,8 @@ def payment_form
     render({ :template => "calculation_templates/payment_form.html.erb"})
 end
 
+def sqroot_form
+    render({ :template => "calculation_templates/sqroot_form.html.erb"})
+end 
+
 end

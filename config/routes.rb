@@ -10,4 +10,5 @@ get("/random/new", { :controller => "application", :action => "random_form"})
 
 get("/payment/new", { :controller => "application", :action => "payment_form"})
 
+get("/square_root/new", { :controller => "application", :action => "sqroot_form"})
 end
