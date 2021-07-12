@@ -39,7 +39,8 @@ def sqroot_form
 end 
 
 def sqroot_results
-
+    @num = params.fetch("apple").to_f
+    @result = @num ** 0.5
     render({ :template => "calculation_templates/sqroot_results.html.erb"})
 end
 
