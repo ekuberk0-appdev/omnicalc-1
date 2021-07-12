@@ -19,4 +19,13 @@ def calculate_random
 render({ :template => "calculation_templates/rand_results.html.erb"})
 
 end
+
+def random_form
+    render({ :template => "calculation_templates/random_form.html.erb"})
+end 
+
+def payment_form
+    render({ :template => "calculation_templates/payment_form.html.erb"})
+end
+
 end
