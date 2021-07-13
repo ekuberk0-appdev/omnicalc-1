@@ -30,10 +30,10 @@ end
 
 
 def payment_results
-    @num1 = params.fetch("user_apr").to_s(:percentage)
+    @num1 = params.fetch("user_apr").to_f.round(3).to_s(:percentage)
     @num2 = params.fetch("user_years").to_i
-    @num3 = params.fetch("user_pv").to_s(:currency)
-    # @result = .round
+    @num3 = params.fetch("user_pv").to_f.to_s(:currency)
+    #@result = .round
 
     render({ :template => "calculation_templates/payment_results.html.erb"})
 end 
