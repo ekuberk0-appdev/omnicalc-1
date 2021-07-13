@@ -30,10 +30,15 @@ end
 
 
 def payment_results
-    @num1 = params.fetch("user_apr").to_f.round(3).to_s(:percentage)
+    @num1 = params.fetch("user_apr").to_f.round(4).to_s(:percentage)
     @num2 = params.fetch("user_years").to_i
-    @num3 = params.fetch("user_pv").to_f.to_s(:currency)
-    #@result = .round
+    @num3 = params.fetch("user_pv").to_f.round(2).to_s(:currency)
+    
+    r = @num1 % 12.0
+    n = @num2 * 12.0
+    numerator = r * @num3
+    denominator = 1 - (1 + r) **-n
+    @result = numerator / denominator
 
     render({ :template => "calculation_templates/payment_results.html.erb"})
 end 
